@@ -1,0 +1,9 @@
+<p><a ui-sref="categories">Back to all categories</a></p>
+<h5>Our items of category {{ controller.categoryName }}:</h5>
+<p>
+  <ul>
+    <li ng-repeat="item in controller.items">
+        {{ item.name }}
+    </li>
+  </ul>
+</p>
