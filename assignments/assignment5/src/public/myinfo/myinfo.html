@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">My registration information</h2>
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <div ng-if="myInfoCtrl.isSignedUp()">
+      Your first name: {{ myInfoCtrl.getFirstName() }} <br>
+      Your last name: {{ myInfoCtrl.getLastName() }} <br>
+      Your email name: {{ myInfoCtrl.getEmail() }} <br>
+      Your phone name: {{ myInfoCtrl.getPhone() }} <br>
+      Your favorite menu item: {{ myInfoCtrl.getMenuItem().name }} <br>
+      <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.getMenuItem().short_name}}.jpg" alt="{{myInfoCtrl.getMenuItem().name}}">
+      {{ myInfoCtrl.getMenuItem().description }}
+
+    </div>
+
+    <div class="text-center" ng-if="!myInfoCtrl.isSignedUp()">
+      Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!<a>
+    </div>
+
+  </div>
+</div>
